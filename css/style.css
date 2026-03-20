@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #14171c;
+}
+
+header {
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    flex-direction: row;
+    background-color: #2b292941;
+    height: 80px;
+
+    justify-content: space-between;
+}
+
+div#pages {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+    color: white;
+    font-size: small;
+}
+
+div#right {
+    margin-right: 20px;
+}
+
+img#logo {
+    margin-left: 20px;
+    height: 40px;
+}
+
+input#search {
+    height: 30px;
+}
+
+button#signup {
+    background-color: green;
+    border-radius: 10px;
+    height: 40px;
+    width: 120px;
+
+    margin-right: 20px;
+}
+
+img#landingpage-banner {
+    height: 100%;
+    width: 100%;
+}
