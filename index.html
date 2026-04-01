@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Watchr</title>
 </head>
 
@@ -13,10 +14,10 @@
   <header id="desktop">
     <img class="logo-header" src="img/logo2.png">
     <div id="pages-desktop">
-      <h1>Films</h1>
-      <h1>Lists</h1>
-      <h1>Members</h1>
-      <h1>Journal</h1>
+      <a href="films.html"><h1>Films</h1></a>
+      <a href="lists.html"><h1>Lists</h1></a>
+      <a href="members.html"><h1>Members</h1></a>
+      <a href="journal.html"><h1>Journal</h1></a>
     </div>
     <div id="right-desktop">
       <button class="signup">Sign in / Sign up</button>
@@ -27,11 +28,24 @@
   </header>
 
   <header id="phone">
-    <img class="logo-header" src="img/logo2.png">
 
+    <a id="hamburger" onclick="hamburger()">
+      <i class="fa fa-bars"></i>
+    </a>
+
+    <img class="logo-header" src="img/logo2.png">
+    <div id="pages-phone">
+      <a href="films.html"><h1>Films</h1></a>
+      <a href="lists.html"><h1>Lists</h1></a>
+      <a href="members.html"><h1>Members</h1></a>
+      <a href="journal.html"><h1>Journal</h1></a>
+    </div>
+
+    
 
     <div class="gradient"></div>
   </header>
+  <script src="js/main.js"></script>
 
 
 

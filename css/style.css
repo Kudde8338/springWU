@@ -7,6 +7,10 @@ body {
     background-color: #14171c;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 
 
@@ -86,14 +90,36 @@ header#desktop {
 /* ====HEADER (MOBILE)==== */
 header#phone {
     position: relative;
+    
 
     display: none;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
 
-    height: 80px;
+
+    height: auto;
     background-color: #1a1919;
 }
+
+/* Navigation phone */
+#pages-phone {
+    display: none;
+
+    color: white;
+    font-size: small;
+}
+
+/* Navigation phone */
+a#hamburger {
+    position: absolute;
+    color: white;
+    font-size: 35px;
+
+    left: 25px;
+    top: 25px;
+}
+
+
 
 /* ====SWITCH==== */
 @media (max-width: 800px) {
@@ -136,3 +162,38 @@ main#landingpage {
 
     transform: translateY(-80px);
 }
+
+
+
+
+
+/* =========================MAIN / films========================= */
+main#films {
+    display: flex;
+
+    justify-content: center;
+
+
+    height: 100%;
+    width: 100%;
+    background-color: #313030ea;
+
+
+}
+
+div#featured {
+    background-image: url(../img/dune.png);
+    width: calc(100% - 300px);
+    height: 400px;
+    border-radius: 20px;
+
+    margin-top: 30px;
+}
+
+div#featured-text {
+    border-radius: inherit;
+    background-color: #1a1919ea;
+    width: 600px;
+    height: 100%;
+}
+
