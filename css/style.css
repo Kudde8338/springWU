@@ -296,3 +296,14 @@ div#regular {
     transition: opacity 0.12s;
     z-index: 2;
 }
+
+/* ====SWITCH==== */
+@media (max-width: 845px) {
+    div#featured {
+        display: none;
+    }
+
+    div#featured {
+        display: block;
+    }
+}
