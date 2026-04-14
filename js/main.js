@@ -53,4 +53,19 @@ document.addEventListener('DOMContentLoaded', () => {
         rotY: 7,
         scale: 1,
     });
+
+    openMovie();
 });
+
+
+function openMovie() {
+    const movies = document.querySelectorAll('.movie');
+
+    movies.forEach(movie => {
+        movie.addEventListener('click', () => {
+            const title = movie.querySelector('.movie-title').textContent;
+            const fileName = "/movies/" + title.trim().toLowerCase().replace(/\s+/g, '-') + ".html";
+            window.location.href = fileName;
+        });
+    });
+}
