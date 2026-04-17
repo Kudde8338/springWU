@@ -14,16 +14,16 @@
     <header id="desktop">
         <img class="logo-header" src="../img/logo2.png">
         <div id="pages-desktop">
-            <a href="films.html">
+            <a href="../films.html">
                 <h1>Films</h1>
             </a>
-            <a href="lists.html">
+            <a href="../lists.html">
                 <h1>Lists</h1>
             </a>
-            <a href="members.html">
+            <a href="../members.html">
                 <h1>Members</h1>
             </a>
-            <a href="profile.html">
+            <a href="../profile.html">
                 <h1>Profile</h1>
             </a>
         </div>
@@ -38,33 +38,101 @@
         <a id="hamburger" onclick="hamburger()"><i class="fa fa-bars"></i></a>
         <img class="logo-header" src="../img/logo2.png">
         <div id="pages-phone">
-            <a href="films.html">
+            <a href="../films.html">
                 <h1>Films</h1>
             </a>
-            <a href="lists.html">
+            <a href="../lists.html">
                 <h1>Lists</h1>
             </a>
-            <a href="members.html">
+            <a href="../members.html">
                 <h1>Members</h1>
             </a>
-            <a href="profile.html">
+            <a href="../profile.html">
                 <h1>Profile</h1>
             </a>
         </div>
         <div class="gradient"></div>
     </header>
 
+    <script src="../js/main.js"></script>
 
-    <script src="js/main.js"></script>
 
+    <main id="movie-desktop">
 
-    <main id="Interstellar">
+        <div id="movie-title">Interstellar</div>
 
-        <div class="movie-left">
+        <div id="movie-desc">
+            <h2>About the movie</h2>
+
+            <p>
+                In the near future, Earth is becoming uninhabitable. A group of explorers travel through a wormhole in
+                space
+                in an attempt to ensure humanity's survival.
+            </p>
+
+            <div id="movie-meta">
+                <p><strong>Release:</strong> 2014</p>
+                <p><strong>Runtime:</strong> 169 min</p>
+                <p><strong>Genre:</strong> Sci-Fi, Drama</p>
+            </div>
 
         </div>
-        <img src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="" class="movie-image">
 
+        <div id="movie-ratings">
+            <h2>Rating</h2>
+
+            <div id="rating-box">
+                <span id="rating-score">8.7</span>
+                <span id="rating-max">/10</span>
+            </div>
+
+            <div id="rating-bar">
+                <div id="rating-fill"></div>
+            </div>
+
+            <p id="rating-text">Based on user reviews</p>
+        </div>
+
+        <div id="movie-actors">
+            <div class="actor-card">
+                <div class="actor-img"
+                    style="background-image: url('https://image.tmdb.org/t/p/w185/wJiGedOCZhwMx9DezY8uwbNxmAY.jpg')">
+                </div>
+                <p class="actor-name">Matthew McConaughey<br><span class="character-name">Cooper</span></p>
+            </div>
+
+            <div class="actor-card">
+                <div class="actor-img"
+                    style="background-image: url('https://image.tmdb.org/t/p/w185/tLelKoPNiyJCSEtQTz1FGv4TLGc.jpg')">
+                </div>
+                <p class="actor-name">Anne Hathaway<br><span class="character-name">Brand</span></p>
+            </div>
+
+            <div class="actor-card">
+                <div class="actor-img"
+                    style="background-image: url('https://media.themoviedb.org/t/p/w300_and_h450_face/lodMzLKSdrPcBry6TdoDsMN3Vge.jpg')">
+                </div>
+                <p class="actor-name">Jessica Chastain<br><span class="character-name">Murph</span></p>
+            </div>
+
+            <div class="actor-card">
+                <div class="actor-img"
+                    style="background-image: url('https://media.themoviedb.org/t/p/w300_and_h450_face/bVZRMlpjTAO2pJK6v90buFgVbSW.jpg')">
+                </div>
+                <p class="actor-name">Michael Caine<br><span class="character-name">Professor Brand</span></p>
+            </div>
+
+            <div class="actor-card">
+                <div class="actor-img"
+                    style="background-image: url('https://media.themoviedb.org/t/p/w300_and_h450_face/304ilSygaCRWykoBWAL67TOw8g9.jpg')">
+                </div>
+                <p class="actor-name">Casey Affleck<br><span class="character-name">Tom</span></p>
+            </div>
+        </div>
+
+        <div id="movie-image-container">
+            <div id="movie-image"></div>
+        </div>
     </main>
 
 </body>

@@ -7,7 +7,8 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    overflow-x: hidden;
     background-color: #14171c;
 }
 
@@ -31,10 +32,12 @@ header#desktop {
     height: 80px;
 
     background-color: #1a1919;
+
+    z-index: 10;
 }
 
 /* Center navigation */
-#pages-desktop {
+div#pages-desktop {
     position: absolute;
     top: 10px;
     left: 50%;
@@ -45,13 +48,12 @@ header#desktop {
 
     color: white;
     font-size: small;
+    font-family: sans-serif;
 }
 
 /* Right side (search + button) */
-#right-desktop {
-    position: absolute;
-    right: 20px;
-    top: 20px;
+div#right-desktop {
+    margin-right: 40px;
 
     display: flex;
     align-items: center;
@@ -61,7 +63,7 @@ header#desktop {
 /* Logo */
 .logo-header {
     margin-top: 5px;
-    margin-left: 20px;
+    margin-left: 40px;
     height: 70px;
 }
 
@@ -313,10 +315,204 @@ div#regular {
 
 
 
-div#movie-left {
 
+
+
+
+
+main#movie-desktop {
+    display: grid;
+    height: calc(100% - 80px);
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 1fr 2fr 2fr;
+
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+
+    grid-template-areas:
+        "title image"
+        "desc image"
+        "ratings image"
+        "actors image";
+}
+
+div#movie-image-container {
+    grid-area: image;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
 }
 
 div#movie-image {
+    height: 100%;
+    aspect-ratio: 2/3;
+    background-size: contain;
+
+    background:
+        linear-gradient(to right, #14171c, transparent 80px),
+        linear-gradient(to left, #14171c, transparent 80px),
+        linear-gradient(to top, #14171c, transparent 80px),
+        url('https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg');
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 25px;
+}
+
+div#movie-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 100px;
+    font-family: sans-serif;
+    font-weight: 900;
+
+    grid-area: title;
+    color: white;
+
+    border-bottom: solid#aaa 1px;
+}
+
+div#movie-desc {
+    grid-area: desc;
+
+    padding: 30px;
+
+    color: white;
+
+    font-family: sans-serif;
+
+    border-bottom: solid#aaa 1px;
+}
+
+div#movie-desc h2 {
+    font-size: 1.5rem;
+}
+
+div#movie-desc p {
+    font-size: 0.95rem;
+}
+
+div#movie-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    font-size: 0.85rem;
+}
+
+div#movie-ratings {
+    grid-area: ratings;
+
+    padding: 30px;
+
+    color: white;
+
+    font-family: sans-serif;
+
+    border-bottom: solid#aaa 1px;
+}
+
+div#movie-ratings h2 {
+    font-size: 1.5rem;
+}
+
+div#rating-box {
+    display: flex;
+    align-items: baseline;
+}
+
+span#rating-score {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #4aa8de;
+}
+
+span#rating-max {
+    font-size: 1rem;
+    color: #aaa;
+}
+
+div#rating-bar {
+    width: 100%;
+    height: 8px;
+
+    background-color: #333;
+    border-radius: 10px;
+}
+
+div#rating-fill {
+    width: 87%;
+    height: 100%;
+    border-radius: 10px;
+
+    background-color: #4aa8de;
+}
+
+p#rating-text {
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+
+
+div#movie-actors {
+    grid-area: actors;
+    padding: 30px;
+
+    display: flex;
+    gap: 10px;
     
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    align-items: center;    
+}
+
+.actor-card {
+    flex: 0 0 auto;
+
+    width: 140px;
+    height: 200px;
+
+    background-color: #222;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    justify-content: space-between;
+}
+
+
+.actor-img {
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+}
+
+.actor-name {
+    margin: 0;
+    padding: 8px;
+
+    font-size: 0.75rem;
+    color: white;
+    font-family: sans-serif;
+
+    text-align: center;
+    background-color: #111;
+}
+
+.character-name {
+    font-weight: 900;
 }
